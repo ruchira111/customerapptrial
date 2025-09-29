@@ -32,15 +32,20 @@
 
         <!-- User Info Section -->
         <div class="user-info-section">
-            <div class="user-avatar">
-                <div class="avatar-placeholder">👤</div>
-            </div>
-            <div class="user-details">
-                <h2>Prakhar</h2>
-                <p>prakhar@email.com</p>
-                <div class="user-status">
-                    <span class="status-badge gold">Gold Member</span>
+            <div class="user-main-info">
+                <div class="user-avatar">
+                    <div class="avatar-placeholder">👤</div>
                 </div>
+                <div class="user-details">
+                    <h2>Prakhar</h2>
+                    <p>prakhar@email.com</p>
+                    <div class="user-status">
+                        <span class="status-badge gold">Gold Member</span>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-profile-btn">
+                <button class="edit-btn">Edit Profile</button>
             </div>
         </div>
 
@@ -48,62 +53,35 @@
         <div class="profile-cards">
             <!-- Wallet Card -->
             <div class="profile-card wallet-card" onclick="goToWallet()">
-                <div class="card-icon">💰</div>
-                <div class="card-content">
+                <div class="card-header">
+                    <div class="card-icon">💰</div>
                     <h3>Wallet</h3>
-                    <p>Manage your balance and payment methods</p>
-                    <div class="card-balance">$40.50</div>
                 </div>
-                <div class="card-arrow">→</div>
+                <div class="card-balance-row">
+                    <div class="card-balance">$40.50</div>
+                    <div class="card-arrow">→</div>
+                </div>
             </div>
 
             <!-- Rewards Card -->
             <div class="profile-card rewards-card" onclick="goToBenefits()">
-                <div class="card-icon">🎁</div>
-                <div class="card-content">
+                <div class="card-header">
+                    <div class="card-icon">🎁</div>
                     <h3>Rewards</h3>
-                    <p>View your active benefits and loyalty status</p>
-                    <div class="card-status">12 Active Benefits</div>
                 </div>
-                <div class="card-arrow">→</div>
+                <div class="card-balance-row">
+                    <div class="card-balance">12 Active Benefits</div>
+                    <div class="card-arrow">→</div>
+                </div>
             </div>
 
-            <!-- Profile Card -->
-            <div class="profile-card profile-settings-card">
-                <div class="card-icon">⚙️</div>
-                <div class="card-content">
-                    <h3>Profile Settings</h3>
-                    <p>Manage your account and preferences</p>
-                    <div class="card-actions">
-                        <button class="profile-action-btn">Edit Profile</button>
-                        <button class="profile-action-btn">Notifications</button>
-                    </div>
+            <!-- Logout Card -->
+            <div class="profile-card logout-card">
+                <div class="card-header">
+                    <div class="card-icon">🚪</div>
+                    <h3>Logout</h3>
+                    <div class="card-arrow">→</div>
                 </div>
-                <div class="card-arrow">→</div>
-            </div>
-        </div>
-
-        <!-- Additional Options -->
-        <div class="additional-options">
-            <div class="option-item">
-                <div class="option-icon">📞</div>
-                <span>Contact Support</span>
-                <div class="option-arrow">→</div>
-            </div>
-            <div class="option-item">
-                <div class="option-icon">📋</div>
-                <span>Order History</span>
-                <div class="option-arrow">→</div>
-            </div>
-            <div class="option-item">
-                <div class="option-icon">ℹ️</div>
-                <span>About SMRT</span>
-                <div class="option-arrow">→</div>
-            </div>
-            <div class="option-item logout">
-                <div class="option-icon">🚪</div>
-                <span>Logout</span>
-                <div class="option-arrow">→</div>
             </div>
         </div>
 
@@ -122,7 +100,7 @@
                     <div class="nav-icon">👤</div>
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon">❓</div>
+                    <div class="nav-icon" onclick="goToContactSupport()">❓</div>
                 </div>
             </div>
         </div>

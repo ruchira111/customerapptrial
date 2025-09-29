@@ -27,16 +27,21 @@
         <!-- Header -->
         <div class="machines-header">
             <div class="header-title">Available Machines</div>
-            <div class="cart-icon" onclick="goToCart()">🛒</div>
+            <div class="cart-icon" onclick="goToCart()">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
         </div>
 
         <!-- Filter Section -->
-        <div class="filter-section">
-            <div class="filter-buttons">
-                <button class="filter-btn active">All</button>
-                <button class="filter-btn">Washers</button>
-                <button class="filter-btn">Dryers</button>
-                <button class="filter-btn">Available</button>
+        <div class="filter-container">
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Washers</button>
+                    <button class="filter-btn">Dryers</button>
+                    <button class="filter-btn">Available</button>
+                </div>
             </div>
         </div>
 
@@ -60,7 +65,7 @@
                     <div class="nav-icon" onclick="goToProfile()">👤</div>
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon">❓</div>
+                    <div class="nav-icon" onclick="goToContactSupport()">❓</div>
                 </div>
             </div>
         </div>

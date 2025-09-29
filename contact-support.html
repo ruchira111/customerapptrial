@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT - Contact Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="scrollable">
+    <div class="app-container scrollable">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="contact-header">
+            <div class="back-button" onclick="goBack()">←</div>
+            <div class="header-title">Contact Support</div>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Support Options -->
+        <div class="support-options">
+            <!-- Live Chat -->
+            <div class="support-card" onclick="startLiveChat()">
+                <div class="support-icon">💬</div>
+                <div class="support-content">
+                    <h3>Live Chat</h3>
+                    <p>Get instant help from our support team</p>
+                </div>
+                <div class="support-arrow">→</div>
+            </div>
+
+            <!-- Phone Support -->
+            <div class="support-card" onclick="callSupport()">
+                <div class="support-icon">📞</div>
+                <div class="support-content">
+                    <h3>Phone Support</h3>
+                    <p>Call us at +1 (555) 123-4567</p>
+                </div>
+                <div class="support-arrow">→</div>
+            </div>
+
+            <!-- Email Support -->
+            <div class="support-card" onclick="emailSupport()">
+                <div class="support-icon">📧</div>
+                <div class="support-content">
+                    <h3>Email Support</h3>
+                    <p>Send us an email at support@smrt.com</p>
+                </div>
+                <div class="support-arrow">→</div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="support-card" onclick="openFAQ()">
+                <div class="support-icon">❓</div>
+                <div class="support-content">
+                    <h3>FAQ</h3>
+                    <p>Find answers to common questions</p>
+                </div>
+                <div class="support-arrow">→</div>
+            </div>
+        </div>
+
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToHome()">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToProfile()">👤</div>
+                </div>
+                <div class="nav-item active">
+                    <div class="nav-icon">❓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

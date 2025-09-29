@@ -29,7 +29,10 @@
 
         <!-- Shopping Cart -->
         <div class="shopping-cart">
-            <div class="cart-icon">🛒</div>
+            <div class="cart-icon" onclick="goToCart()">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
         </div>
 
         <!-- Greeting -->
@@ -48,7 +51,7 @@
                         <h3>Wallet Balance</h3>
                         <h2>$40.50</h2>
                     </div>
-                    <div class="add-money-btn">
+                    <div class="add-money-btn" onclick="showAddMoneyModal()">
                         <span>+</span>
                     </div>
                 </div>
@@ -90,7 +93,7 @@
                     <div class="nav-icon" onclick="goToProfile()">👤</div>
                 </div>
                 <div class="nav-item">
-                    <div class="nav-icon">❓</div>
+                    <div class="nav-icon" onclick="goToContactSupport()">❓</div>
                 </div>
             </div>
         </div>
@@ -98,6 +101,32 @@
         <!-- Scan Button -->
         <div class="scan-button">
             <div class="qr-icon">📱</div>
+        </div>
+    </div>
+
+    <!-- Add Money Modal -->
+    <div id="addMoneyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Money to Wallet</h3>
+                <span class="close-btn" onclick="closeAddMoneyModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="amount-options">
+                    <button class="amount-btn" onclick="selectAmount(10)">$10</button>
+                    <button class="amount-btn" onclick="selectAmount(25)">$25</button>
+                    <button class="amount-btn" onclick="selectAmount(50)">$50</button>
+                    <button class="amount-btn" onclick="selectAmount(100)">$100</button>
+                </div>
+                <div class="custom-amount">
+                    <label>Custom Amount</label>
+                    <input type="number" id="customAmount" placeholder="Enter amount" min="1" max="1000">
+                </div>
+                <div class="selected-amount">
+                    <span>Selected: $<span id="selectedAmount">0</span></span>
+                </div>
+                <button class="confirm-btn" onclick="confirmAddMoney()">Add Money</button>
+            </div>
         </div>
     </div>
 

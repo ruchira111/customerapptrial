@@ -162,8 +162,54 @@ function addToCart() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart.push(machine);
     localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
     
     alert('Added to cart!');
+}
+
+function quickAddToCart(machineId) {
+    const machine = machinesData.find(m => m.id === machineId);
+    if (machine && machine.status === 'Available') {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.push({
+            id: machine.id,
+            name: machine.name,
+            price: machine.price,
+            duration: machine.type === 'Washer' ? '10 mins' : '30 mins',
+            addons: []
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+    }
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCountElements = document.querySelectorAll('.cart-count');
+    cartCountElements.forEach(element => {
+        element.textContent = cart.length;
+    });
+}
+
+// Contact Support Functions
+function startLiveChat() {
+    alert('Live chat feature coming soon! For now, please call or email us.');
+}
+
+function callSupport() {
+    window.location.href = 'tel:+15551234567';
+}
+
+function emailSupport() {
+    window.location.href = 'mailto:support@smrt.com';
+}
+
+function openFAQ() {
+    alert('FAQ section coming soon! For now, please contact us directly.');
+}
+
+function goToContactSupport() {
+    window.location.href = 'contact-support.html';
 }
 
 function payNow() {
@@ -399,6 +445,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Add hover effects
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize cart count
+    updateCartCount();
+    
     // Add hover effects to clickable cards
     const clickableCards = document.querySelectorAll('.card');
     clickableCards.forEach(card => {
