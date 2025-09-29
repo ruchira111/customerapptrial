@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT Loyalty Club - Benefits</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="scrollable">
+    <div class="app-container scrollable">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="benefits-header">
+            <div class="back-button" onclick="goBack()">←</div>
+            <div class="header-title">Benefits</div>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Magenta Bar -->
+        <div class="magenta-bar"></div>
+
+        <!-- Rewards Illustration -->
+        <div class="rewards-illustration">
+            <div class="reward-item">
+                <div class="phone-icon">📱</div>
+                <div class="percentage">%</div>
+            </div>
+            <div class="reward-item">
+                <div class="gift-box">🎁</div>
+            </div>
+            <div class="reward-item">
+                <div class="loyalty-card">💳</div>
+            </div>
+            <div class="reward-item">
+                <div class="shopping-bag">🛍️</div>
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+            <h1 class="greeting-text">Hello Prakhar</h1>
+            <h2 class="welcome-title">Welcome to SMRT's Loyalty Club</h2>
+            <p class="welcome-description">
+                As a valued member, you'll enjoy exclusive discounts, surprise perks, and rewards every time you do laundry.
+            </p>
+            
+            <!-- Savings Banner -->
+            <div class="savings-banner">
+                <div class="savings-icon">⭐</div>
+                <span>You're saving $100 with this membership!</span>
+            </div>
+        </div>
+
+        <!-- Special Discounts Section -->
+        <div class="discounts-section">
+            <h3 class="discounts-title">Special Discounts for You</h3>
+            <div class="discounts-grid">
+                <div class="discount-card">
+                    <h4>Welcome Gift</h4>
+                    <p>Special Discount When You Sign Up</p>
+                </div>
+                <div class="discount-card">
+                    <h4>Small Washers Savings</h4>
+                    <p>Pay Less On Small Loads</p>
+                </div>
+                <div class="discount-card">
+                    <h4>Wallet Bonuses</h4>
+                    <p>Extra Credit Every Time You Top Up</p>
+                </div>
+                <div class="discount-card">
+                    <h4>Terrific Tuesday</h4>
+                    <p>Weekly Laundry Deals On Tuesdays</p>
+                </div>
+                <div class="discount-card">
+                    <h4>Late-Night Saver</h4>
+                    <p>Discounts When You Wash Late</p>
+                </div>
+                <div class="discount-card">
+                    <h4>Big Spender Bonus</h4>
+                    <p>Reward When You Spend Big</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToHome()">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToProfile()">👤</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">❓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

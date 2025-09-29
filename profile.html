@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="scrollable">
+    <div class="app-container scrollable">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="profile-header">
+            <div class="header-title">Profile</div>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- User Info Section -->
+        <div class="user-info-section">
+            <div class="user-avatar">
+                <div class="avatar-placeholder">👤</div>
+            </div>
+            <div class="user-details">
+                <h2>Prakhar</h2>
+                <p>prakhar@email.com</p>
+                <div class="user-status">
+                    <span class="status-badge gold">Gold Member</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Cards -->
+        <div class="profile-cards">
+            <!-- Wallet Card -->
+            <div class="profile-card wallet-card" onclick="goToWallet()">
+                <div class="card-icon">💰</div>
+                <div class="card-content">
+                    <h3>Wallet</h3>
+                    <p>Manage your balance and payment methods</p>
+                    <div class="card-balance">$40.50</div>
+                </div>
+                <div class="card-arrow">→</div>
+            </div>
+
+            <!-- Rewards Card -->
+            <div class="profile-card rewards-card" onclick="goToBenefits()">
+                <div class="card-icon">🎁</div>
+                <div class="card-content">
+                    <h3>Rewards</h3>
+                    <p>View your active benefits and loyalty status</p>
+                    <div class="card-status">12 Active Benefits</div>
+                </div>
+                <div class="card-arrow">→</div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="profile-card profile-settings-card">
+                <div class="card-icon">⚙️</div>
+                <div class="card-content">
+                    <h3>Profile Settings</h3>
+                    <p>Manage your account and preferences</p>
+                    <div class="card-actions">
+                        <button class="profile-action-btn">Edit Profile</button>
+                        <button class="profile-action-btn">Notifications</button>
+                    </div>
+                </div>
+                <div class="card-arrow">→</div>
+            </div>
+        </div>
+
+        <!-- Additional Options -->
+        <div class="additional-options">
+            <div class="option-item">
+                <div class="option-icon">📞</div>
+                <span>Contact Support</span>
+                <div class="option-arrow">→</div>
+            </div>
+            <div class="option-item">
+                <div class="option-icon">📋</div>
+                <span>Order History</span>
+                <div class="option-arrow">→</div>
+            </div>
+            <div class="option-item">
+                <div class="option-icon">ℹ️</div>
+                <span>About SMRT</span>
+                <div class="option-arrow">→</div>
+            </div>
+            <div class="option-item logout">
+                <div class="option-icon">🚪</div>
+                <span>Logout</span>
+                <div class="option-arrow">→</div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToHome()">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item active">
+                    <div class="nav-icon">👤</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">❓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

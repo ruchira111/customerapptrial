@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT - QR Scan Instructions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="scan-header">
+            <div class="back-button" onclick="goBack()">←</div>
+            <div class="header-title">Scan QR Code</div>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-container">
+            <div class="instruction-item">
+                <div class="instruction-number">1</div>
+                <div class="instruction-content">
+                    <h3>Find the QR code</h3>
+                    <p>Look for the QR code sticker on the machine</p>
+                </div>
+            </div>
+            
+            <div class="instruction-item">
+                <div class="instruction-number">2</div>
+                <div class="instruction-content">
+                    <h3>Tap scan button</h3>
+                    <p>Point your camera at the QR code</p>
+                </div>
+            </div>
+            
+            <div class="instruction-item">
+                <div class="instruction-number">3</div>
+                <div class="instruction-content">
+                    <h3>Add to cart</h3>
+                    <p>Select options and add the machine to your cart</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Camera Viewfinder -->
+        <div class="camera-container">
+            <div class="camera-viewfinder">
+                <div class="camera-icon">📷</div>
+                <p class="camera-text">Camera viewfinder</p>
+                <div class="scan-corners">
+                    <div class="corner top-left"></div>
+                    <div class="corner top-right"></div>
+                    <div class="corner bottom-left"></div>
+                    <div class="corner bottom-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scan Button -->
+        <div class="scan-action-button">
+            <button class="start-scan-btn" onclick="startScanning()">Start Scanning</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToHome()">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToProfile()">👤</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">❓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

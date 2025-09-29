@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT - Machine Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="machine-header">
+            <div class="back-button" onclick="goBack()">←</div>
+            <div class="header-title">Machine Details</div>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Machine Image -->
+        <div class="machine-image-container">
+            <div class="machine-image">
+                <div class="machine-placeholder">🏭</div>
+            </div>
+            <div class="availability-badge">
+                <span>Available</span>
+            </div>
+        </div>
+
+        <!-- Machine Details Card -->
+        <div class="machine-details-card">
+            <h2>Washer</h2>
+            <div class="machine-info">
+                <span class="price">$4.99/cycle</span>
+                <span class="separator">|</span>
+                <span class="duration">10 mins</span>
+            </div>
+        </div>
+
+        <!-- Add-ons Section -->
+        <div class="addons-section">
+            <h3>Add-ons</h3>
+            <div class="addon-options">
+                <div class="addon-item" onclick="toggleAddon('extra-rinse')">
+                    <div class="addon-info">
+                        <span class="addon-icon">+</span>
+                        <span class="addon-name">Extra Rinse</span>
+                    </div>
+                    <span class="addon-price">+$1.50</span>
+                </div>
+                <div class="addon-item" onclick="toggleAddon('extra-hot')">
+                    <div class="addon-info">
+                        <span class="addon-icon">+</span>
+                        <span class="addon-name">Extra Hot Water</span>
+                    </div>
+                    <span class="addon-price">+$1.50</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+            <button class="pay-now-btn" onclick="payNow()">Pay Now $4.99</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToHome()">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToProfile()">👤</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">❓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

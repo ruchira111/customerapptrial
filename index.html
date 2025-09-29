@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT Customer App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Ellipse -->
+        <div class="background-ellipse"></div>
+
+        <!-- Shopping Cart -->
+        <div class="shopping-cart">
+            <div class="cart-icon">🛒</div>
+        </div>
+
+        <!-- Greeting -->
+        <div class="greeting">
+            <h1>Hello,</h1>
+            <h1>Prakhar</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Wallet Card -->
+            <div class="card wallet-card">
+                <div class="card-content">
+                    <div class="left-section">
+                        <div class="wallet-icon">💰</div>
+                        <h3>Wallet Balance</h3>
+                        <h2>$40.50</h2>
+                    </div>
+                    <div class="add-money-btn">
+                        <span>+</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Benefits Card -->
+            <div class="card benefits-card">
+                <div class="card-content">
+                    <div class="left-section">
+                        <div class="benefits-icon">💎</div>
+                        <h3>Active Benefits</h3>
+                        <h2>12</h2>
+                        <div class="badges">
+                            <span class="badge subscriber">SUBSCRIBER</span>
+                            <span class="badge loyalty">LOYALTY MEMBER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scan to Start Callout -->
+        <div class="scan-callout">
+            <span>SCAN TO START</span>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item active">
+                    <div class="nav-icon">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToProfile()">👤</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon">❓</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scan Button -->
+        <div class="scan-button">
+            <div class="qr-icon">📱</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
