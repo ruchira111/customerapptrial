@@ -2792,6 +2792,7 @@ body.scrollable {
     position: relative;
     margin-top: 130px;
     padding: 20px;
+    padding-bottom: 140px;
     z-index: 10;
 }
 
@@ -2936,6 +2937,7 @@ body.scrollable {
 
 .generated-gradients-section {
     padding: 20px;
+    padding-bottom: 140px;
     margin-top: 20px;
 }
 
@@ -3010,6 +3012,7 @@ body.scrollable {
 
 .gradient-preview-section {
     padding: 20px;
+    padding-bottom: 160px;
     margin-top: 20px;
 }
 
