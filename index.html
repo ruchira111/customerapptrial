@@ -141,6 +141,7 @@
                     const backgroundElement = document.getElementById('backgroundGradient');
                     if (backgroundElement && gradient.css) {
                         backgroundElement.style.background = gradient.css;
+                        backgroundElement.classList.add('animated');
                     }
                 } catch (e) {
                     console.error('Error applying custom gradient:', e);

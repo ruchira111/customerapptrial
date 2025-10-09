@@ -114,7 +114,7 @@ function generateGradients() {
     
     gradients.forEach((gradient, index) => {
         const gradientCard = document.createElement('div');
-        gradientCard.className = 'gradient-option-card';
+        gradientCard.className = `gradient-option-card animate-${(index % 8) + 1}`;
         gradientCard.style.background = gradient.css;
         gradientCard.onclick = () => selectGradient(gradient, gradientCard);
         
@@ -277,6 +277,7 @@ function showGradientPreview(gradient) {
     
     previewSection.style.display = 'block';
     previewCard.style.background = gradient.css;
+    previewCard.classList.add('animated');
     
     // Scroll to preview
     previewSection.scrollIntoView({ behavior: 'smooth', block: 'center' });

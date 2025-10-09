@@ -3115,6 +3115,122 @@ body.scrollable {
     background: #e9ecef;
 }
 
+/* Gradient Animations */
+@keyframes gradientShift1 {
+    0% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-size: 250% 250%;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-size: 200% 200%;
+    }
+}
+
+@keyframes gradientShift2 {
+    0% {
+        background-position: 50% 0%;
+        background-size: 200% 200%;
+    }
+    50% {
+        background-position: 50% 100%;
+        background-size: 220% 220%;
+    }
+    100% {
+        background-position: 50% 0%;
+        background-size: 200% 200%;
+    }
+}
+
+@keyframes gradientShift3 {
+    0% {
+        background-position: 100% 0%;
+        background-size: 180% 180%;
+    }
+    50% {
+        background-position: 0% 100%;
+        background-size: 230% 230%;
+    }
+    100% {
+        background-position: 100% 0%;
+        background-size: 180% 180%;
+    }
+}
+
+@keyframes gradientShift4 {
+    0% {
+        background-position: 0% 0%;
+        background-size: 210% 210%;
+    }
+    50% {
+        background-position: 100% 100%;
+        background-size: 260% 260%;
+    }
+    100% {
+        background-position: 0% 0%;
+        background-size: 210% 210%;
+    }
+}
+
+@keyframes gradientPulse {
+    0%, 100% {
+        opacity: 0.95;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.02);
+    }
+}
+
+.gradient-option-card.animate-1 {
+    animation: gradientShift1 8s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-2 {
+    animation: gradientShift2 10s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-3 {
+    animation: gradientShift3 12s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-4 {
+    animation: gradientShift4 9s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-5 {
+    animation: gradientShift1 11s ease-in-out infinite, gradientPulse 6s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-6 {
+    animation: gradientShift2 13s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-7 {
+    animation: gradientShift3 7s ease-in-out infinite;
+}
+
+.gradient-option-card.animate-8 {
+    animation: gradientShift4 14s ease-in-out infinite;
+}
+
+/* Animated background for preview card */
+.gradient-preview-card.animated {
+    animation: gradientShift1 10s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
+/* Home page background animation */
+.background-ellipse.animated {
+    animation: gradientShift2 15s ease-in-out infinite;
+    background-size: 200% 200%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 375px) {
     .app-container {
