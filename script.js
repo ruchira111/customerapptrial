@@ -114,12 +114,105 @@ window.onclick = function(event) {
 }
 
 // QR Scanning Functions
+let isScanning = false;
+let scanInterval;
+
 function startScanning() {
-    // Simulate QR code scanning
-    setTimeout(() => {
-        alert('QR Code detected! Loading machine details...');
-        goToMachineDetails();
+    // Hide instructions and show camera
+    document.getElementById('instructions-container').classList.add('hidden');
+    document.getElementById('scan-action-button').classList.add('hidden');
+    document.getElementById('camera-container').classList.remove('hidden');
+    document.getElementById('machine-details').classList.add('hidden');
+    
+    // Add enhanced classes for full-screen camera
+    const cameraContainer = document.getElementById('camera-container');
+    const cameraViewfinder = cameraContainer.querySelector('.camera-viewfinder');
+    const cameraIcon = cameraContainer.querySelector('.camera-icon');
+    const cameraText = cameraContainer.querySelector('.camera-text');
+    const scanCorners = cameraContainer.querySelector('.scan-corners');
+    const corners = scanCorners.querySelectorAll('.corner');
+    
+    cameraContainer.classList.add('enhanced');
+    cameraViewfinder.classList.add('enhanced');
+    cameraIcon.classList.add('enhanced');
+    cameraText.classList.add('enhanced');
+    scanCorners.classList.add('enhanced');
+    corners.forEach(corner => corner.classList.add('enhanced'));
+    
+    isScanning = true;
+    
+    // Simulate continuous scanning
+    scanInterval = setInterval(() => {
+        if (isScanning) {
+            // Simulate QR code detection (random chance)
+            if (Math.random() < 0.3) { // 30% chance every 2 seconds
+                simulateQRDetection();
+            }
+        }
     }, 2000);
+}
+
+function simulateQRDetection() {
+    // Simulate finding a machine
+    const machines = [
+        { name: 'Washer 99', status: 'Available', price: '$2.50' },
+        { name: 'Dryer 15', status: 'Available', price: '$1.75' },
+        { name: 'Washer 42', status: 'In Use', price: '$2.50' },
+        { name: 'Dryer 8', status: 'Available', price: '$1.75' },
+        { name: 'Washer 17', status: 'Available', price: '$2.50' }
+    ];
+    
+    const randomMachine = machines[Math.floor(Math.random() * machines.length)];
+    
+    // Update machine details
+    document.getElementById('scanned-machine-name').textContent = randomMachine.name;
+    document.getElementById('scanned-machine-status').textContent = randomMachine.status;
+    document.getElementById('scanned-machine-price').textContent = randomMachine.price;
+    
+    // Show machine details
+    document.getElementById('machine-details').classList.remove('hidden');
+    
+    // Update status text
+    document.querySelector('.camera-text.enhanced').textContent = 'QR Code detected!';
+    
+    // Reset after 3 seconds
+    setTimeout(() => {
+        document.querySelector('.camera-text.enhanced').textContent = 'Point camera at QR code';
+    }, 3000);
+}
+
+function closeCamera() {
+    isScanning = false;
+    clearInterval(scanInterval);
+    
+    // Hide camera and show instructions
+    document.getElementById('camera-container').classList.add('hidden');
+    document.getElementById('machine-details').classList.add('hidden');
+    document.getElementById('instructions-container').classList.remove('hidden');
+    document.getElementById('scan-action-button').classList.remove('hidden');
+}
+
+function addScannedToCart() {
+    const machineName = document.getElementById('scanned-machine-name').textContent;
+    const machinePrice = document.getElementById('scanned-machine-price').textContent;
+    
+    // Add to cart
+    addToCart();
+    
+    // Show confirmation
+    alert(`${machineName} added to cart!`);
+    
+    // Keep scanning
+    document.querySelector('.camera-text.enhanced').textContent = 'Point camera at QR code';
+}
+
+function payScannedDirectly() {
+    const machineName = document.getElementById('scanned-machine-name').textContent;
+    const machinePrice = document.getElementById('scanned-machine-price').textContent;
+    
+    // Add to cart first, then go to payment
+    addToCart();
+    goToPayment();
 }
 
 // Machine Details Functions
@@ -210,6 +303,25 @@ function openFAQ() {
 
 function goToContactSupport() {
     window.location.href = 'contact-support.html';
+}
+
+function goToSubscription() {
+    window.location.href = 'subscription.html';
+}
+
+function goToCustomizeGradient() {
+    window.location.href = 'customize-gradient.html';
+}
+
+function manageSubscription() {
+    alert('Redirecting to subscription management...');
+    // In a real app, this would redirect to a subscription management portal
+}
+
+function cancelSubscription() {
+    if (confirm('Are you sure you want to cancel your subscription? You will lose access to all premium benefits.')) {
+        alert('Subscription cancellation request submitted. You will receive a confirmation email shortly.');
+    }
 }
 
 function payNow() {

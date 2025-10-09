@@ -25,7 +25,7 @@
         </div>
 
         <!-- Background Ellipse -->
-        <div class="background-ellipse"></div>
+        <div class="background-ellipse" id="backgroundGradient"></div>
 
         <!-- Shopping Cart -->
         <div class="shopping-cart">
@@ -131,5 +131,22 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Apply custom gradient if available
+        document.addEventListener('DOMContentLoaded', function() {
+            const customGradient = localStorage.getItem('customGradient');
+            if (customGradient) {
+                try {
+                    const gradient = JSON.parse(customGradient);
+                    const backgroundElement = document.getElementById('backgroundGradient');
+                    if (backgroundElement && gradient.css) {
+                        backgroundElement.style.background = gradient.css;
+                    }
+                } catch (e) {
+                    console.error('Error applying custom gradient:', e);
+                }
+            }
+        });
+    </script>
 </body>
 </html>

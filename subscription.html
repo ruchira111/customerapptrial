@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMRT - Subscription</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="scrollable">
+    <div class="app-container scrollable">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="time">9:41</div>
+            <div class="indicators">
+                <div class="cellular-icon">📶</div>
+                <div class="wifi-icon">📶</div>
+                <div class="battery">
+                    <div class="battery-border">
+                        <div class="battery-cap"></div>
+                        <div class="battery-capacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="subscription-header">
+            <div class="back-button" onclick="goBack()">←</div>
+            <div class="header-title">Subscription</div>
+            <div class="header-spacer"></div>
+        </div>
+
+        <!-- Current Plan Section -->
+        <div class="current-plan-section">
+            <div class="plan-header">
+                <div class="plan-icon">⭐</div>
+                <div class="plan-info">
+                    <h2>Gold Monthly</h2>
+                    <p>Active since January 2024</p>
+                </div>
+                <div class="plan-status">
+                    <span class="status-badge active">Active</span>
+                </div>
+            </div>
+            <div class="plan-details">
+                <div class="plan-price">$19.99/month</div>
+                <div class="plan-renewal">Next billing: February 15, 2024</div>
+            </div>
+        </div>
+
+        <!-- Plan Benefits -->
+        <div class="benefits-section">
+            <h3>Your Gold Benefits</h3>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-content">
+                        <h4>Priority Machine Access</h4>
+                        <p>Reserve machines up to 24 hours in advance</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-content">
+                        <h4>20% Discount on All Services</h4>
+                        <p>Save on every wash and dry cycle</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🚀</div>
+                    <div class="benefit-content">
+                        <h4>Express Service</h4>
+                        <p>Faster processing and priority support</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎁</div>
+                    <div class="benefit-content">
+                        <h4>Exclusive Rewards</h4>
+                        <p>Access to member-only promotions and offers</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📱</div>
+                    <div class="benefit-content">
+                        <h4>Premium App Features</h4>
+                        <p>Advanced analytics and usage tracking</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🆓</div>
+                    <div class="benefit-content">
+                        <h4>Free Pickup & Delivery</h4>
+                        <p>Complimentary service for orders over $25</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Options -->
+        <div class="plan-options">
+            <h3>Other Plans</h3>
+            <div class="plan-option-card">
+                <div class="option-header">
+                    <h4>Silver Monthly</h4>
+                    <div class="option-price">$9.99/month</div>
+                </div>
+                <div class="option-benefits">
+                    <span>10% discount</span>
+                    <span>Basic support</span>
+                </div>
+                <button class="option-btn">Switch Plan</button>
+            </div>
+            <div class="plan-option-card">
+                <div class="option-header">
+                    <h4>Gold Annual</h4>
+                    <div class="option-price">$199.99/year</div>
+                </div>
+                <div class="option-benefits">
+                    <span>All Gold benefits</span>
+                    <span>2 months free</span>
+                </div>
+                <button class="option-btn">Switch Plan</button>
+            </div>
+        </div>
+
+        <!-- Management Actions -->
+        <div class="management-actions">
+            <button class="action-btn primary" onclick="manageSubscription()">Manage Subscription</button>
+            <button class="action-btn secondary" onclick="cancelSubscription()">Cancel Subscription</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToHome()">🏠</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToMachines()">🏭</div>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToProfile()">👤</div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-icon" onclick="goToContactSupport()">❓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
